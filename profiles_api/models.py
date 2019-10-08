@@ -22,8 +22,8 @@ class UserProfileManager(BaseUserManager):
         user = self.create_user(email, name, password)
         user.is_superuser = True
         user.is_staff = True
-        user.save(using=self._db)
-        
+        user.save(using=self._db) 
+
 
 class UserProfile(AbstractBaseUser, PermissionsMixin):
     """ Database models for users in the system """
@@ -48,4 +48,4 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         """Return string representation of our user"""
         return self.email
-    # 0087801218
+    
